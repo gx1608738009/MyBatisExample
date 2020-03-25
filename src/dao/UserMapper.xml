@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 配置实体类与数据库表之间的映射文件
+namespace:sql映射文件的命名空间
+ -->
+<mapper namespace="dao.UserMapper">
+    <!-- 书写操作数据库的Sql命令 -->
+    <!-- 查询用户表中用户数量的SQL语句 -->
+    <select id="getCount" resultType="int">
+       select count(*) count from smbms_user
+    </select>
+</mapper>
